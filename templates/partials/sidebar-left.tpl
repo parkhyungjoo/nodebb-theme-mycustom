@@ -1,4 +1,5 @@
 <nav component="sidebar/left" class="{{{ if config.theme.openSidebars}}}open{{{ end }}} text-dark bg-light sidebar sidebar-left start-0 border-end vh-100 d-none d-lg-flex flex-column justify-content-between sticky-top">
+
 	<ul id="main-nav" class="list-unstyled d-flex flex-column w-100 gap-2 mt-2 overflow-y-auto">
 		{{{ each navigation }}}
 		{{{ if displayMenuItem(@root, @index) }}}
@@ -25,10 +26,10 @@
 		{{{ end }}}
 	</ul>
 	<div class="sidebar-toggle-container align-self-start">
+<!--
 		{{{ if !config.disableCustomUserSkins }}}
 		<!-- IMPORT partials/skin-switcher.tpl -->
 		{{{ end }}}
-
 		<div class="sidebar-toggle m-2 d-none d-lg-block">
 			<a href="#" role="button" component="sidebar/toggle" class="nav-link d-flex gap-2 align-items-center p-2 pointer w-100 text-nowrap" title="[[themes/harmony:expand]]" aria-label="[[themes/harmony:sidebar-toggle]]">
 				<i class="fa fa-fw fa-angles-right"></i>
@@ -36,5 +37,22 @@
 				<span class="nav-text visible-open fw-semibold small lh-1">[[themes/harmony:collapse]]</span>
 			</a>
 		</div>
+-->		
+<!-- right side bar -->
+{{{ if config.loggedIn }}}
+	<ul id="logged-in-menu" class="list-unstyled d-flex flex-column w-100 gap-2 mt-2" role="menu">
+	<!-- IMPORT partials/sidebar/logged-in-menu.tpl -->
+	</ul>
+	{{{ else }}}
+	<ul id="logged-out-menu" class="list-unstyled d-flex flex-column w-100 gap-2 mt-2" role="menu">
+	<!-- IMPORT partials/sidebar/logged-out-menu.tpl -->
+	</ul>
+	{{{ end }}}
+
+	<div class="visible-open small text-secondary mt-auto" data-widget-area="sidebar-footer">
+		{{{each widgets.sidebar-footer}}}
+		{{./html}}
+		{{{end}}}
+	</div>
 	</div>
 </nav>
