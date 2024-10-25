@@ -2,5 +2,6 @@
     "id": "nodebb-theme-mycustom1",
     "name": "나의 테마1",
     "description": "하모니 포크한 나의 테마 1",
-    "url": "https://github.com/parkhyungjoo/nodebb-theme-mycustom"    
+    "url": "https://github.com/parkhyungjoo/nodebb-theme-mycustom",
+    "screenshot": "screenshot.png"
 }
