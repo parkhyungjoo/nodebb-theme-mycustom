@@ -1,19 +1,7 @@
-Harmony theme for NodeBB
+나의 테마 정보
 ====================
 
-The Harmony theme is the default theme for NodeBB for versions spanning v3.0.0 onwards.
-
-## Issues
-
-Issues are tracked in [the main project issue tracker](https://github.com/NodeBB/NodeBB/issues?q=is%3Aopen+is%3Aissue+label%3Athemes).
+하모니 테마를 포크해서 새롭게 만든 테마
 
 ## Screenshots
-
-### Categories
-<img height="450" src="screenshots/categories.png">
-
-### Recent
-<img height="450" src="screenshots/recent.png">
-
-### Topic
-<img height="450" src="screenshots/topic.png">
+<img height="450" src="screenshot.png">
